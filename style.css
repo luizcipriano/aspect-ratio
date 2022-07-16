@@ -8,14 +8,14 @@ body{
 
 @media (orientation: portrait) {
   .container {
-    --low: min(100vh, calc(16/9 * 100vmax));
+    --low: min(100vh, calc(16/9 * 100vw));
     width: var(--low);
     height: calc(9/16 * var(--low));
   }
 }
 @media (orientation: landscape) {
   .container {
-    --low: min(100vh, calc(9/16 * 100vmax));
+    --low: min(100vh, calc(9/16 * 100vw));
     width: calc(16/9 * var(--low));
     height: var(--low);
   }
