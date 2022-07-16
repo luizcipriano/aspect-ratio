@@ -3,20 +3,21 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #333;
 }
 
 @media (orientation: portrait) {
   .container {
-    --min: min(100vmin, calc(16/9 * 100vmax));
-    width: var(--min);
-    height: calc(9/16 * var(--min));
+    --low: min(100vh, calc(16/9 * 100vmax));
+    width: var(--low);
+    height: calc(9/16 * var(--low));
   }
 }
 @media (orientation: landscape) {
   .container {
-    --min: min(100vmin, calc(9/16 * 100vmax));
-    width: calc(16/9 * var(--min));
-    height: var(--min);
+    --low: min(100vh, calc(9/16 * 100vmax));
+    width: calc(16/9 * var(--low));
+    height: var(--low);
   }
 }
 .square-grid {
@@ -26,5 +27,5 @@ body{
 }
 .square {
   aspect-ratio: 16 / 9;
-  background: rosybrown;
+  background: linear-gradient(90deg, rgba(249,246,46,1) 0%, rgba(155,19,227,1) 79%);
 }
