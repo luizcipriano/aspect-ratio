@@ -4,17 +4,25 @@ body{
   justify-content: center;
   align-items: center;
 }
-.container{
-  margin: 0 auto;
-  max-width: 1100px;
-  width: 100%;
+
+@media (orientation: portrait) {
+  .container {
+    --min: min(100vmin, calc(16/9 * 100vmax));
+    width: var(--min);
+    height: calc(9/16 * var(--min));
+  }
+}
+@media (orientation: landscape) {
+  .container {
+    --min: min(100vmin, calc(9/16 * 100vmax));
+    width: calc(16/9 * var(--min));
+    height: var(--min);
+  }
 }
 .square-grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  gap: 1rem;
-  min-height: 50vh;
 }
 .square {
   aspect-ratio: 16 / 9;
